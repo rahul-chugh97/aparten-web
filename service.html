@@ -1,13 +1,13 @@
-<html> 
+<html>
 <head>
-    
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,22 +17,13 @@
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-	
-	<!-- Custom Fonts -->
+
+    <!-- Morris Charts CSS -->
+    <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-     
-	 <!-- Custom fonts for this template -->
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/new-age.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,32 +33,136 @@
 
 </head>
 <body>
-	/*<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Aparten</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>*/
-<div id="page-wrapper" style="min-height: 624px;">
+	<div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Aparten</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav in" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level collapse">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper" style="min-height: 624px;">
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Dashboard</h1>
@@ -84,8 +179,8 @@
                                     <i class="fa fa-comments fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>New Comments!</div>
+                                    <div class="huge">4</div>
+                                    <div>Electrician</div>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +194,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
+                    <div class="panel panel-white">
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -167,6 +262,7 @@
             </div>
             <!-- /.row -->
             
+
                 <div class="col-lg-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -349,12 +445,15 @@
             </div>
             <!-- /.row -->
         </div>
-		<script src="../vendor/jquery/jquery.min.js"></script>
-		<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../vendor/metisMenu/metisMenu.min.js"></script>
-		<script src="../vendor/raphael/raphael.min.js"></script>
-		<script src="../vendor/morrisjs/morris.min.js"></script>
-		<script src="../data/morris-data.js"></script>
-		<script src="../dist/js/sb-admin-2.js"></script>
+        <!-- /#page-wrapper -->
+
+    </div>
+	<script src="../vendor/jquery/jquery.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+	<script src="../vendor/raphael/raphael.min.js"></script>
+	<script src="../vendor/morrisjs/morris.min.js"></script>
+	<script src="../data/morris-data.js"></script>
+	<script src="../dist/js/sb-admin-2.js"></script>
 </body>
 </html>
